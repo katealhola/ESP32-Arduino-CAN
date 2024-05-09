@@ -8,6 +8,10 @@
 * Standard and Extended Frames
 * CAN Message Filter
 
+## Fork by Kate Alhola
+
+ * Added int CAN_write_frame_wait(const CAN_frame_t *p_frame,const TickType_t xTicksToWait) version of write frame funvtion because original version got stchk infinitely and non recocerable if something went wrong
+
 
 
 ## Third Party Components

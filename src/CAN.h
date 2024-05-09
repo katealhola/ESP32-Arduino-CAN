@@ -109,6 +109,16 @@ int CAN_init(void);
 int CAN_write_frame(const CAN_frame_t *p_frame);
 
 /**
+ * \brief Send a can frame
+ *
+ * \param	p_frame	Pointer to the frame to be send, see #CAN_frame_t
+ * \param	xTicksToWait time to wait send frame complete
+ * \return  -1 not initialized 0 wait timeout 1  Frame has been written to the module
+ */
+
+int CAN_write_frame_wait(const CAN_frame_t *p_frame,const TickType_t xTicksToWait);
+
+/**
  * \brief Stops the CAN Module
  *
  * \return 0 CAN Module was stopped

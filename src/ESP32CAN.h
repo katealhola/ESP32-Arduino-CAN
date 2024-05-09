@@ -10,6 +10,7 @@ class ESP32CAN
         int CANInit();
 		int CANConfigFilter(const CAN_filter_t* p_filter);
         int CANWriteFrame(const CAN_frame_t* p_frame);
+        int CANWriteFrameWait(const CAN_frame_t* p_frame,const TickType_t xTicksToWait);
         int CANStop();
 };
 

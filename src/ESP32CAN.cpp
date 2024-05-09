@@ -8,6 +8,10 @@ int ESP32CAN::CANWriteFrame(const CAN_frame_t* p_frame)
 {
     return CAN_write_frame(p_frame);
 }
+int ESP32CAN::CANWriteFrameWait(const CAN_frame_t* p_frame,const TickType_t xTicksToWait)
+{
+    return CAN_write_frame_wait(p_frame,xTicksToWait);
+}
 int ESP32CAN::CANStop()
 {
     return CAN_stop();
